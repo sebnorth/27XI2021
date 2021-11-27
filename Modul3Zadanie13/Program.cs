@@ -20,30 +20,43 @@ namespace Modul3Zadanie13
              * n wierszy (n-n=0) spacji n krzyżyków
             */
 
-            for (int k = 1; k <= n; k++)
+            for (int k = 1; k <= n; k++) // numer wiersza
             {
-                // pętla rysujaca spacje
-                for (int s = 1; s <= n-k; s++)
+
+                if (k == 1 || k == n)
                 {
-                    Console.Write(" ");
+
+                    // pętla rysujaca spacje
+                    for (int s = 1; s <= n - k; s++)
+                    {
+                        Console.Write(" ");
+                    }
+
+                    // pętla rysująca krzyżyki
+                    for (int i = 1; i <= k; i++)
+                    {
+                        Console.Write("X");
+                    }
                 }
-
-                //// pętla rysująca krzyżyki
-                //for (int i = 1; i <= k; i++)
-                //{
-                //    Console.Write("X");
-                //}
-
-                // 1 krzyżyk
-                Console.Write("X");
-                // k - 2 spacji
-                for (int i = 1; i <= k-2; i++)
+                else
                 {
-                    Console.Write(" ");
-                }
+                    // pętla rysujaca spacje
+                    for (int s = 1; s <= n - k; s++)
+                    {
+                        Console.Write(" ");
+                    }
 
-                // 1 krzyżyk 
-                Console.Write("X");
+                    // 1 krzyżyk
+                    Console.Write("X");
+                    // k - 2 spacji
+                    for (int i = 1; i <= k - 2; i++)
+                    {
+                        Console.Write(" ");
+                    }
+
+                    // 1 krzyżyk 
+                    Console.Write("X");
+                }
 
                 // przejście do nowej linii
                 Console.WriteLine();
